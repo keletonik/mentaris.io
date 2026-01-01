@@ -1,0 +1,11 @@
+# Robots.txt for Mentaris AI Business Intelligence
+# https://mentaris.io
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://mentaris.io/sitemap.xml

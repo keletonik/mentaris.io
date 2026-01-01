@@ -1,0 +1,249 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/app/_not-found/page-37f0881aff45e137.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/css/b31d5ab6a18c1ad2.css",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/1-ffe770ac25b7eec8.js",
+      "static/chunks/470-67490d588d5a544a.js",
+      "static/chunks/app/layout-d149f13041299a8f.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/about/page-5054ae9d6752eb93.js"
+    ],
+    "/blog/ai-implementation-success/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/1-ffe770ac25b7eec8.js",
+      "static/chunks/app/blog/ai-implementation-success/page-4937e9b6c8907089.js"
+    ],
+    "/blog/cybersecurity-best-practices/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/1-ffe770ac25b7eec8.js",
+      "static/chunks/app/blog/cybersecurity-best-practices/page-8e796d4e58d6b66b.js"
+    ],
+    "/blog/future-of-ai-2024/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/1-ffe770ac25b7eec8.js",
+      "static/chunks/app/blog/future-of-ai-2024/page-9eaacb2cf2328888.js"
+    ],
+    "/blog/data-analytics-guide/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/1-ffe770ac25b7eec8.js",
+      "static/chunks/app/blog/data-analytics-guide/page-ea0093ac1a4d1ba0.js"
+    ],
+    "/blog/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/blog/page-ce4f627d763e2ef7.js"
+    ],
+    "/blog/machine-learning-beginners/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/1-ffe770ac25b7eec8.js",
+      "static/chunks/app/blog/machine-learning-beginners/page-f0b1d8b8bab82138.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/page-44570b4ed7a4aac8.js"
+    ],
+    "/faq/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/470-67490d588d5a544a.js",
+      "static/chunks/app/faq/page-c23033a533d1b321.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/app/contact/page-0b137a7132b2c0ff.js"
+    ],
+    "/privacy/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/app/privacy/page-62c9bb18cb526cf7.js"
+    ],
+    "/resources/knowledge/ai-implementation/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/resources/knowledge/ai-implementation/page-26b8f2051c993b25.js"
+    ],
+    "/resources/knowledge/intro-ai-models/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/resources/knowledge/intro-ai-models/page-3fe972662c2c2b96.js"
+    ],
+    "/resources/knowledge/measuring-roi/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/resources/knowledge/measuring-roi/page-5f8fa215df3fac63.js"
+    ],
+    "/resources/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/resources/page-f41e7e48d2cd98f7.js"
+    ],
+    "/services/ai-consulting/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/ai-consulting/page-aa35f7039fde7b8c.js"
+    ],
+    "/services/ai-tools/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/ai-tools/page-17f1842ed539722d.js"
+    ],
+    "/services/custom-software/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/custom-software/page-cc0f93dacdd46abc.js"
+    ],
+    "/services/data-analytics/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/data-analytics/page-cd70cb748cc8883e.js"
+    ],
+    "/services/cybersecurity/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/cybersecurity/page-674bc91f75c9716c.js"
+    ],
+    "/services/malware-analysis/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/malware-analysis/page-8032fe3257dc6e6b.js"
+    ],
+    "/services/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/app/services/page-540ea4261e402fc6.js"
+    ],
+    "/services/machine-learning/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/475-6d3f5923e06b5d5d.js",
+      "static/chunks/979-c7653451ab29f23d.js",
+      "static/chunks/app/services/machine-learning/page-95fea0dcdcc398bf.js"
+    ],
+    "/terms/page": [
+      "static/chunks/webpack-aad94a69424fb1a9.js",
+      "static/chunks/ceb5afef-d98ad726377d3148.js",
+      "static/chunks/156-36bccd06aa642d3c.js",
+      "static/chunks/main-app-f896963268641fe0.js",
+      "static/chunks/473-3df1266db20ed685.js",
+      "static/chunks/app/terms/page-982433aa3d13a3ce.js"
+    ]
+  }
+}
