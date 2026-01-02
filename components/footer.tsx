@@ -43,11 +43,8 @@ export default function Footer() {
                 />
               </Link>
               
-              <p className="text-zinc-500 text-sm leading-relaxed mb-2">
-                AI implementation for businesses that can't afford to fall behind.
-              </p>
-              <p className="text-zinc-600 text-sm mb-6">
-                Sydney, Australia · Working with clients globally
+              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                AI implementation for compliance-heavy industries. Sydney, Australia.
               </p>
 
               <a 

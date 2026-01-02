@@ -11,9 +11,9 @@ export default function BlogPost() {
     <BlogPostTemplate
       title="5 Signs Your Business Is Ready for AI (And 3 Signs It Isn't)"
       category="AI Strategy"
-      date="1 January 2026"
+      date="1 January 2025"
       readTime="12 min read"
-      author="Caspar Tavitian"
+      author="Casper Tavitian"
     >
       <p className="lead">
         Not every business is ready for AI. That's not a criticism — it's just a practical reality. AI implementation requires certain conditions to succeed, and if those conditions don't exist, you'll spend money without getting results.

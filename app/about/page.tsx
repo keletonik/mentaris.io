@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, Users, Target, Lightbulb, Shield, MapPin, Zap, Code } from 'lucide-react';
-import { FadeIn, StaggerChildren, StaggerItem, PrecisionNumber } from '@/components/motion';
+import { FadeIn, StaggerChildren, StaggerItem } from '@/components/motion';
 import { OrbitalRings } from '@/components/motion/orbital';
 
 export default function AboutPage() {
@@ -29,11 +29,7 @@ export default function AboutPage() {
     },
   ];
 
-  const stats = [
-    { value: 50, suffix: '+', label: 'Projects Delivered' },
-    { value: 98, suffix: '%', label: 'Client Satisfaction' },
-    { value: 15, suffix: '+', label: 'Industries Served' },
-  ];
+
 
   return (
     <main className="bg-[#111113] min-h-screen">
@@ -81,24 +77,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 border-y border-zinc-800/50 bg-zinc-900/30">
-        <div className="container-narrow">
-          <div className="grid grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <FadeIn key={stat.label} delay={index * 0.1}>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-semibold text-white">
-                    <PrecisionNumber value={stat.value} />
-                    <span className="text-cyan-400">{stat.suffix}</span>
-                  </div>
-                  <p className="text-sm text-zinc-500 mt-2 font-mono">{stat.label}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Story */}
       <section className="py-20 lg:py-28">

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, MapPin, Send, CheckCircle, AlertCircle, ArrowRight, Clock, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, ArrowRight, Clock } from 'lucide-react';
 import { FadeIn, RevealLine } from '@/components/motion';
 import { OrbitalRings } from '@/components/motion/orbital';
 
@@ -256,22 +256,7 @@ export default function ContactPage() {
                 </div>
               </FadeIn>
 
-              {/* FAQ Callout */}
-              <FadeIn delay={0.2}>
-                <div className="precision-panel p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <MessageSquare className="w-4 h-4 text-cyan-400" />
-                    <span className="font-mono text-xs text-zinc-500 uppercase tracking-wider">Quick Answers</span>
-                  </div>
-                  <p className="text-sm text-zinc-400 mb-4">
-                    Check our FAQ for answers to common questions.
-                  </p>
-                  <a href="/faq" className="btn-ghost text-sm p-0">
-                    View FAQ
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </FadeIn>
+
 
               {/* Visual Element */}
               <FadeIn delay={0.25} className="hidden lg:block">

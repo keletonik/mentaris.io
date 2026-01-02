@@ -11,9 +11,9 @@ export default function BlogPost() {
     <BlogPostTemplate
       title="What AI Can and Can't Do for Small Businesses in 2026"
       category="AI Strategy"
-      date="1 January 2026"
+      date="1 January 2025"
       readTime="10 min read"
-      author="Caspar Tavitian"
+      author="Casper Tavitian"
     >
       <p className="lead">
         There's a lot of noise around AI right now. Every software vendor is slapping "AI-powered" onto their product pages, LinkedIn is full of people claiming AI will replace entire industries, and somewhere a consultant is charging $50,000 to tell a company they should "leverage generative AI for competitive advantage."
