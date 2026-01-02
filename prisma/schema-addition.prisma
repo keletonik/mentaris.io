@@ -1,0 +1,20 @@
+// Add this model to your existing prisma/schema.prisma file
+// Run `npx prisma db push` or `npx prisma migrate dev` after adding
+
+// Whitepaper download email capture
+// Tracks who downloaded what and whether they opted in
+model WhitepaperDownload {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  firstName      String?
+  subscribe      Boolean  @default(true)
+  downloadCount  Int      @default(1)
+  lastDownloadAt DateTime @default(now())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("whitepaper_downloads")
+}
+
+// Note: Your existing schema should already have ContactSubmission
+// Just add this WhitepaperDownload model to the same file

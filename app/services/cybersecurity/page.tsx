@@ -1,80 +1,119 @@
-'use client';
-
+import { Shield, Cpu, Code2, Search } from 'lucide-react';
 import ServicePageTemplate from '@/components/service-page-template';
-import { Shield, Lock, Eye, AlertTriangle, FileSearch, Users, Search, Code, Brain } from 'lucide-react';
+
+// security & compliance - ai implementation for regulated industries
+// proper controls, audit trails, documentation
 
 export default function CybersecurityPage() {
   return (
     <ServicePageTemplate
-      title="Cybersecurity"
-      subtitle="Security"
-      description="Comprehensive security solutions to protect your digital assets. From vulnerability assessments to incident response, we help you build a robust security posture against evolving threats."
+      title="Security & Compliance"
+      subtitle="Regulated Industries"
+      description="AI implementation in regulated industries requires careful attention to data security, privacy, and compliance. We build systems with security baked in from day one."
       icon={Shield}
+      longDescription={
+        <>
+          <p>
+            Implementing AI in compliance-heavy industries isn't just about getting the technology 
+            to work. It's about getting it to work while maintaining proper controls, audit trails, 
+            and documentation that satisfies regulators.
+          </p>
+          <p>
+            We've worked in regulated environments. We understand that "it works" isn't enough — 
+            you need to prove it works correctly, that data is protected, that access is controlled, 
+            and that you can demonstrate all of this to auditors.
+          </p>
+          <p>
+            Our approach builds compliance in from the start, not as an afterthought. Data 
+            classification, access controls, encryption, logging, retention policies — all 
+            addressed during design, not patched on later.
+          </p>
+          <p>
+            We also help with the human side: policies, procedures, training, and documentation 
+            that ensure your team knows how to use AI tools appropriately and can demonstrate 
+            compliance when asked.
+          </p>
+        </>
+      }
       features={[
         {
-          title: 'Security Audits',
-          description: 'Comprehensive assessment of your security posture identifying vulnerabilities and risks.',
-          icon: FileSearch,
+          title: 'Compliance Assessment',
+          description: 'Gap analysis against relevant regulations (privacy laws, industry standards, internal policies).',
         },
         {
-          title: 'Penetration Testing',
-          description: 'Ethical hacking to discover and remediate security weaknesses before attackers do.',
-          icon: Lock,
+          title: 'Security Architecture',
+          description: 'Design that addresses data protection, access control, and threat mitigation.',
         },
         {
-          title: 'Threat Detection',
-          description: 'Real-time monitoring and AI-powered threat detection to identify suspicious activity.',
-          icon: Eye,
+          title: 'Access Controls',
+          description: 'Role-based permissions ensuring only authorised personnel access sensitive functions.',
         },
         {
-          title: 'Incident Response',
-          description: 'Rapid response protocols and forensic analysis when security incidents occur.',
-          icon: AlertTriangle,
+          title: 'Audit Trail Implementation',
+          description: 'Comprehensive logging of actions for compliance demonstration and incident investigation.',
         },
         {
-          title: 'Compliance Support',
-          description: 'Ensure compliance with GDPR, HIPAA, SOC 2, and other regulatory requirements.',
-          icon: Shield,
+          title: 'Policy & Procedure Development',
+          description: 'Documentation for AI governance, acceptable use, and incident response.',
         },
         {
-          title: 'Security Training',
-          description: 'Transform your team into your first line of defense with security awareness training.',
-          icon: Users,
+          title: 'Compliance Documentation',
+          description: 'Records and reports structured for regulatory review and audit support.',
         },
       ]}
-      benefits={[
-        'Reduced risk of data breaches and cyber attacks',
-        'Protection of business reputation and customer trust',
-        'Compliance with regulatory requirements',
-        'Early detection and rapid response to threats',
-        'Cost savings from prevented security incidents',
-      ]}
-      process={[
+      processSteps={[
         {
-          title: 'Security Assessment',
-          description: 'Comprehensive evaluation of your current security infrastructure, policies, and practices.',
+          title: 'Regulatory Landscape Review',
+          description: 'Identify all applicable regulations, standards, and internal policies that apply to your AI implementation.',
         },
         {
-          title: 'Risk Analysis',
-          description: 'Identify and prioritize security risks based on potential impact and likelihood.',
+          title: 'Risk Assessment',
+          description: 'Systematic evaluation of risks associated with AI use, including data privacy, model errors, and misuse scenarios.',
         },
         {
-          title: 'Strategy Development',
-          description: 'Create a tailored security strategy aligned with your business objectives and budget.',
+          title: 'Controls Design',
+          description: 'Technical and procedural controls designed to mitigate identified risks and meet compliance requirements.',
         },
         {
           title: 'Implementation',
-          description: 'Deploy security solutions including monitoring, access controls, and protection systems.',
+          description: 'Build and deploy security measures integrated with the AI solution itself.',
         },
         {
-          title: 'Ongoing Management',
-          description: 'Continuous monitoring, threat intelligence updates, and security posture improvements.',
+          title: 'Documentation & Training',
+          description: 'Comprehensive documentation and staff training on policies and procedures.',
+        },
+        {
+          title: 'Ongoing Monitoring',
+          description: 'Regular review of controls, updates for regulatory changes, and periodic assessments.',
         },
       ]}
+      benefits={[
+        'Meet regulatory requirements from day one',
+        'Audit-ready documentation and logging',
+        'Reduced risk of data breaches',
+        'Clear policies for AI governance',
+        'Staff trained on compliant use',
+        'Confidence for stakeholders and clients',
+      ]}
       relatedServices={[
-        { title: 'Malware Analysis', href: '/services/malware-analysis', icon: Search },
-        { title: 'Custom Software', href: '/services/custom-software', icon: Code },
-        { title: 'AI Consulting', href: '/services/ai-consulting', icon: Brain },
+        {
+          slug: 'ai-consulting',
+          title: 'AI Readiness Assessment',
+          description: 'Start with a clear picture of your needs.',
+          icon: Search,
+        },
+        {
+          slug: 'ai-tools',
+          title: 'AI Tools Integration',
+          description: 'Implementation of existing tools with proper controls.',
+          icon: Cpu,
+        },
+        {
+          slug: 'custom-software',
+          title: 'Custom Development',
+          description: 'Bespoke solutions built with security in mind.',
+          icon: Code2,
+        },
       ]}
     />
   );
