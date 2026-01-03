@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { validateInput, sanitizeString } from '@/lib/security';
+import { validateEmail, sanitizeString } from '@/lib/security';
 
 // POST /api/whitepaper-download
 // captures email before whitepaper download
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     }
 
     // run through security validation
-    const emailValidation = validateInput(email, 'email');
+    const emailValidation = validateEmail(email);
     if (!emailValidation.isValid) {
       return NextResponse.json(
         { error: 'Invalid input' },
