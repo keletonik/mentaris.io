@@ -1,3 +1,4 @@
+"use client";
 'use client';
 
 import ServicePageTemplate from '@/components/service-page-template';

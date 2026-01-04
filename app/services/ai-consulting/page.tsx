@@ -1,3 +1,4 @@
+"use client";
 import { Search, Cpu, Code2, Shield } from 'lucide-react';
 import ServicePageTemplate from '@/components/service-page-template';
 
