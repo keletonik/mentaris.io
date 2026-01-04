@@ -1,10 +1,10 @@
-import Hero from '@/components/home/hero';
-import Services from '@/components/home/services';
-import WhyChooseUs from '@/components/home/why-choose-us';
-import HowItWorks from '@/components/home/how-it-works';
-import WhoThisIsFor from '@/components/home/who-this-is-for';
-import LatestBlog from '@/components/home/latest-blog';
-import FinalCTA from '@/components/home/final-cta';
+import Hero from '@/components/hero';
+import Services from '@/components/services';
+import WhyChooseUs from '@/components/why-choose-us';
+import HowItWorks from '@/components/how-it-works';
+import WhoThisIsFor from '@/components/who-this-is-for';
+import LatestBlog from '@/components/latest-blog';
+import FinalCTA from '@/components/final-cta';
 
 export default function Home() {
   return (
