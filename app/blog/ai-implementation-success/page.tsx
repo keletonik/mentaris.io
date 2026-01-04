@@ -6,7 +6,7 @@ export default function AIImplementationSuccess() {
   return (
     <BlogPostTemplate
       title="Why Most AI Projects Fail (And How to Avoid It)"
-      subtitle="The gap between AI demo and AI value is where most projects die. A practical guide to crossing that gap."
+      excerpt="The gap between AI demo and AI value is where most projects die. A practical guide to crossing that gap."
       author="Casper Tavitian"
       date="January 2025"
       readTime="10 min read"

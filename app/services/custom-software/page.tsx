@@ -1,80 +1,39 @@
-'use client';
-
+import { Code2, Cpu, Shield, Search } from 'lucide-react';
 import ServicePageTemplate from '@/components/service-page-template';
-import { Code, Layers, Server, Globe, Smartphone, Database, Wrench, Brain, Shield } from 'lucide-react';
 
 export default function CustomSoftwarePage() {
   return (
     <ServicePageTemplate
-      title="Custom Software"
-      subtitle="Development"
-      description="Bespoke software solutions built for scale, performance, and reliability. We design and develop applications that solve your unique business challenges and create lasting competitive advantages."
-      icon={Code}
+      title="Custom AI Development"
+      subtitle="Bespoke Solutions"
+      description="When off-the-shelf tools won't cut it, we build custom AI solutions tailored to your specific workflows, data, and requirements."
+      icon={Code2}
       features={[
-        {
-          title: 'Web Applications',
-          description: 'Modern, responsive web apps built with cutting-edge frameworks and cloud-native architectures.',
-          icon: Globe,
-        },
-        {
-          title: 'Mobile Development',
-          description: 'Native and cross-platform mobile apps for iOS and Android with seamless user experiences.',
-          icon: Smartphone,
-        },
-        {
-          title: 'Enterprise Systems',
-          description: 'Scalable enterprise solutions that integrate with existing infrastructure and workflows.',
-          icon: Server,
-        },
-        {
-          title: 'API Development',
-          description: 'RESTful and GraphQL APIs that enable system integration and third-party connectivity.',
-          icon: Layers,
-        },
-        {
-          title: 'Database Design',
-          description: 'Optimized database architectures for performance, scalability, and data integrity.',
-          icon: Database,
-        },
-        {
-          title: 'Legacy Modernization',
-          description: 'Transform outdated systems into modern, maintainable applications without business disruption.',
-          icon: Wrench,
-        },
-      ]}
-      benefits={[
-        'Solutions tailored exactly to your business needs',
-        'Full ownership and control of your software',
-        'Scalable architecture that grows with you',
-        'Integration with existing tools and workflows',
-        'Long-term cost savings over generic solutions',
+        { title: 'Custom Model Training', description: 'AI models trained on your specific data and use cases' },
+        { title: 'System Integration', description: 'Seamless connection with your existing software stack' },
+        { title: 'API Development', description: 'Clean interfaces for your applications to consume AI capabilities' },
+        { title: 'Workflow Automation', description: 'End-to-end process automation with intelligent decision making' },
+        { title: 'Data Pipeline Design', description: 'Robust data flows that keep your AI systems fed and current' },
+        { title: 'Performance Optimisation', description: 'Fast, efficient systems that scale with your needs' },
       ]}
       process={[
-        {
-          title: 'Requirements Analysis',
-          description: 'Deep dive into your business processes, user needs, and technical requirements to define the project scope.',
-        },
-        {
-          title: 'Architecture & Design',
-          description: 'Create system architecture, database design, and UI/UX prototypes for validation before development.',
-        },
-        {
-          title: 'Agile Development',
-          description: 'Iterative development with regular demos and feedback loops. You see progress every sprint.',
-        },
-        {
-          title: 'Quality Assurance',
-          description: 'Comprehensive testing including unit tests, integration tests, and user acceptance testing.',
-        },
-        {
-          title: 'Deployment & Handover',
-          description: 'Production deployment, documentation, training, and ongoing support arrangements.',
-        },
+        { title: 'Requirements', description: 'Deep dive into your specific needs and constraints' },
+        { title: 'Architecture', description: 'Design the technical solution and integration points' },
+        { title: 'Development', description: 'Build, test, and iterate on the solution' },
+        { title: 'Deployment', description: 'Launch with monitoring and support' },
+        { title: 'Optimisation', description: 'Continuous improvement based on real-world performance' },
+      ]}
+      benefits={[
+        'Solution built exactly for your needs',
+        'Competitive advantage through unique capabilities',
+        'Full ownership of the solution',
+        'Integration with existing systems',
+        'Scalable architecture for growth',
       ]}
       relatedServices={[
-        { title: 'AI Tools', href: '/services/ai-tools', icon: Wrench },
-        { title: 'Data Analytics', href: '/services/data-analytics', icon: Database },
-        { title: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { href: '/services/ai-consulting', title: 'AI Readiness Assessment', icon: Search },
+        { href: '/services/ai-tools', title: 'AI Tools Integration', icon: Cpu },
+        { href: '/services/cybersecurity', title: 'Security & Compliance', icon: Shield },
       ]}
     />
   );

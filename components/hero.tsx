@@ -114,7 +114,7 @@ export default function Hero() {
             </h2>
           </FadeIn>
           
-          <StaggerChildren className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+          <StaggerChildren className="grid md:grid-cols-3 gap-6">
             {painPoints.map((point, idx) => (
               <StaggerItem key={idx}>
                 <div className="precision-panel p-6 h-full group hover:border-cyan-400/30 transition-colors">

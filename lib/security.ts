@@ -191,14 +191,17 @@ export class RateLimiter {
   cleanup(): void {
     const now = Date.now();
     const windowStart = now - this.windowMs;
+    const keysToDelete: string[] = [];
     
-    for (const [key, requests] of this.requests.entries()) {
+    this.requests.forEach((requests, key) => {
       const validRequests = requests.filter(time => time > windowStart);
       if (validRequests.length === 0) {
-        this.requests.delete(key);
+        keysToDelete.push(key);
       } else {
         this.requests.set(key, validRequests);
       }
-    }
+    });
+    
+    keysToDelete.forEach(key => this.requests.delete(key));
   }
 }
