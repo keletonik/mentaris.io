@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { timing, easing } from './motion';
+import { MentarisWordmark, MentarisStar } from './mentaris-logo';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -81,17 +81,11 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-20">
             <Link 
               href="/" 
-              className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 rounded"
+              className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 rounded group"
               aria-label="Mentaris - Home"
             >
-              <Image
-                src="/logo-heading.png"
-                alt="Mentaris"
-                width={160}
-                height={36}
-                priority
-                className="object-contain"
-              />
+              <MentarisStar size={28} className="group-hover:rotate-90" />
+              <MentarisWordmark width={140} />
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
@@ -247,7 +241,10 @@ export default function Navigation() {
               aria-label="Mobile navigation"
             >
               <div className="flex items-center justify-between p-4 border-b border-zinc-800">
-                <span className="font-semibold text-sm tracking-wide">Menu</span>
+                <div className="flex items-center gap-2">
+                  <MentarisStar size={20} />
+                  <MentarisWordmark width={100} />
+                </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 text-zinc-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded"
