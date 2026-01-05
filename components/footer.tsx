@@ -1,18 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowUpRight, Mail } from 'lucide-react';
 import { FadeIn, RevealLine } from './motion';
+import { MentarisWordmark, MentarisStar } from './mentaris-logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'Operational AI Integration', href: '/services/ai-tools' },
-    { name: 'Custom AI Development', href: '/services/custom-software' },
-    { name: 'AI Readiness Assessment', href: '/services/ai-consulting' },
-    { name: 'Security & Compliance', href: '/services/cybersecurity' },
+    { name: 'Private AI', href: '/services/private-ai' },
+    { name: 'AI Tools', href: '/services/ai-tools' },
+    { name: 'Custom Software', href: '/services/custom-software' },
+    { name: 'AI Consulting', href: '/services/ai-consulting' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+  ];
+
+  const products = [
+    { name: 'FyreOne AI', href: '/products/fyreone-ai' },
+    { name: 'Intelligent Fire Systems', href: '/products/intelligent-fire-systems' },
   ];
 
   const company = [
@@ -34,13 +40,9 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <FadeIn>
-              <Link href="/" className="block mb-6">
-                <Image
-                  src="/logo-heading.png"
-                  alt="Mentaris"
-                  width={150}
-                  height={35}
-                />
+              <Link href="/" className="flex items-center gap-2 mb-6 group">
+                <MentarisStar size={24} className="group-hover:rotate-90" />
+                <MentarisWordmark width={130} />
               </Link>
               
               <p className="text-zinc-500 text-sm leading-relaxed mb-2">
@@ -62,7 +64,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <FadeIn delay={0.1}>
               <h3 className="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-4">Services</h3>
               <ul className="space-y-2.5">
@@ -81,8 +83,28 @@ export default function Footer() {
             </FadeIn>
           </div>
 
-          {/* Company */}
+          {/* Products */}
           <div className="lg:col-span-2">
+            <FadeIn delay={0.12}>
+              <h3 className="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-4">Products</h3>
+              <ul className="space-y-2.5">
+                {products.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm text-zinc-400 hover:text-white transition-colors inline-flex items-center gap-1 group"
+                    >
+                      {item.name}
+                      <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
+
+          {/* Company */}
+          <div className="lg:col-span-1">
             <FadeIn delay={0.15}>
               <h3 className="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-4">Company</h3>
               <ul className="space-y-2.5">
