@@ -8,50 +8,92 @@ interface Message {
   text: string;
 }
 
-const responses: Record<string, string> = {
-  'hello': "Hello! I'm the Mentaris AI assistant. Ask me about our services, private AI deployment, or fire compliance solutions.",
-  'hi': "Hi there! How can I help you today? I can tell you about private AI, our services, or answer questions about fire compliance.",
-  'hey': "Hey! Welcome to Mentaris. What would you like to know?",
-  'services': "We offer: Private AI Assistants (on your infrastructure), Custom Software Development, AI Consulting, and Cybersecurity solutions. Which interests you?",
-  'what do you do': "We implement AI for businesses that can't afford to fall behind. We analyse operations, identify opportunities, and build systems that actually work. No demos that go nowhere.",
-  'pricing': "Every project is scoped individually based on complexity. Book a free 30-minute assessment and we'll give you a realistic estimate. No pressure, no pitch.",
-  'cost': "Costs vary by project scope. Private AI deployments typically start from $15k for SMBs. Book a call for accurate pricing tailored to your needs.",
-  'private ai': "Private AI means your AI runs on YOUR infrastructure. Your data never leaves your servers. Perfect for legal, healthcare, finance, and compliance-heavy industries.",
-  'data privacy': "With our Private AI solution, your data stays on your servers. We deploy models locally — nothing goes to OpenAI, Google, or any third party.",
-  'security': "Security is core to what we do. Private deployment, no external API calls, full audit trails. We also offer dedicated cybersecurity services.",
-  'fire': "Our FyreOne AI platform handles fire safety compliance — trained on AS 1851, NCC, and Australian standards. It can analyse documents, track schedules, and draft reports.",
-  'fyreone': "FyreOne AI is our fire safety compliance platform. Mobile app for on-site questions, desktop suite for document control and audits. Trained on Australian fire standards.",
-  'compliance': "We specialise in compliance-heavy industries. Our AI can process regulatory documents, extract requirements, and help you stay ahead of audits.",
-  'as 1851': "AS 1851 is our bread and butter. FyreOne AI is trained on the full standard and can answer questions, generate inspection schedules, and flag compliance gaps.",
-  'how does it work': "We deploy open-source models (Llama, Mistral) on your infrastructure, fine-tune them on your documents, and integrate with your existing systems. You own everything.",
-  'what models': "We typically use Llama 3, Mistral, or Qwen depending on your needs. All open-source, all deployed locally. No vendor lock-in.",
-  'integration': "We integrate with your existing tools — document management, CRMs, ERPs. API-first approach means your AI works where your team already works.",
-  'who are you': "Mentaris is an AI implementation consultancy based in Sydney, Australia. We work with clients globally who need AI that actually delivers results.",
-  'location': "We're based in Sydney, Australia, but work with clients globally. Most of our work is remote-friendly.",
-  'contact': "You can reach us at admin@mentaris.io or book a free assessment through the Contact page. We'll get back to you within 24 hours.",
-  'help': "Try asking about: our services, private AI, fire compliance, FyreOne, pricing, or how we work. Or just say what you need!",
-};
+// Smarter response matching with multiple keywords per response
+const responsePatterns: Array<{ keywords: string[]; response: string }> = [
+  // Greetings
+  { keywords: ['hello', 'hi', 'hey', 'g\'day', 'gday', 'howdy'], response: "Hey! I'm the Mentaris AI assistant. Ask me about our services, private AI, or fire compliance solutions." },
+  
+  // What do you do / build
+  { keywords: ['what do you do', 'what do you build', 'what does mentaris do', 'what you do', 'what you build', 'you guys build', 'you guys do', 'your business'], response: "We build and deploy AI systems for businesses. Private AI on your infrastructure, custom software, compliance automation. We focus on industries where data privacy matters — legal, healthcare, fire safety, finance." },
+  
+  // Services overview
+  { keywords: ['services', 'offer', 'provide', 'help with'], response: "Our core services: Private AI (runs on your servers), Custom Software Development, AI Consulting, and Cybersecurity. We specialise in compliance-heavy industries." },
+  
+  // Private AI
+  { keywords: ['private ai', 'private', 'on-premise', 'on premise', 'local ai', 'self-hosted', 'data stay', 'data privacy', 'keep data'], response: "Private AI means your AI runs on YOUR infrastructure. Your data never leaves your servers — nothing goes to OpenAI or Google. Perfect for legal, healthcare, finance, and compliance-heavy industries." },
+  
+  // Location
+  { keywords: ['where', 'location', 'located', 'based', 'office', 'sydney', 'australia'], response: "We're based in Sydney, Australia. We work with clients globally though — most projects are remote-friendly." },
+  
+  // Pricing / Cost
+  { keywords: ['price', 'pricing', 'cost', 'how much', 'expensive', 'rates', 'quote', 'budget'], response: "Every project is scoped individually. Private AI deployments typically start from $15k for SMBs. Book a free 30-min call and we'll give you a realistic estimate — no pressure." },
+  
+  // Fire / FyreOne
+  { keywords: ['fire', 'fyreone', 'fyre', 'as 1851', 'as1851', 'ncc', 'compliance', 'safety', 'afss', 'essential services'], response: "FyreOne AI is our fire safety compliance platform — trained on AS 1851, NCC, and Australian standards. Mobile app for on-site questions, desktop suite for document control and audits. Currently in beta." },
+  
+  // How it works / Technical
+  { keywords: ['how does it work', 'how do you', 'technical', 'tech stack', 'what models', 'llm', 'llama', 'mistral', 'gpt'], response: "We deploy open-source models (Llama, Mistral, Qwen) on your infrastructure, fine-tune them on your documents, and integrate with your systems. You own everything — no vendor lock-in." },
+  
+  // Integration
+  { keywords: ['integrate', 'integration', 'connect', 'api', 'existing system', 'crm', 'erp'], response: "We integrate with your existing tools — document management, CRMs, ERPs. API-first approach means your AI works where your team already works." },
+  
+  // Security
+  { keywords: ['security', 'secure', 'safe', 'cybersecurity', 'hack', 'protect'], response: "Security is core to what we do. Private deployment means no external API calls. Full audit trails, encryption at rest and in transit. We also offer dedicated cybersecurity services." },
+  
+  // Contact
+  { keywords: ['contact', 'email', 'call', 'talk', 'meeting', 'book', 'reach'], response: "Email us at admin@mentaris.io or book a free 30-min assessment at mentaris.io/contact. We'll get back within 24 hours." },
+  
+  // Who / Team / About
+  { keywords: ['who are you', 'about', 'team', 'founder', 'company', 'mentaris'], response: "Mentaris is an AI implementation consultancy based in Sydney. Founded by someone who spent years in fire safety compliance and got tired of manual processes. We build AI that actually works." },
+  
+  // Capabilities / Can you
+  { keywords: ['can you', 'able to', 'capability', 'what can', 'do you support'], response: "I can answer questions about Mentaris services, private AI deployment, fire compliance (FyreOne), pricing, and how we work. Try asking about something specific!" },
+  
+  // Help
+  { keywords: ['help', 'commands', 'options', 'what to ask'], response: "Try asking: 'What do you build?', 'How does private AI work?', 'Tell me about FyreOne', 'How much does it cost?', or 'Where are you located?'" },
+  
+  // Thanks
+  { keywords: ['thanks', 'thank you', 'cheers', 'ta'], response: "No worries! Anything else you want to know?" },
+  
+  // Industries
+  { keywords: ['industry', 'industries', 'sector', 'who do you work with', 'clients'], response: "We work with compliance-heavy industries: fire safety, legal, healthcare, finance, government. Anyone who needs AI but can't send their data to the cloud." },
+  
+  // Timeline / How long
+  { keywords: ['how long', 'timeline', 'duration', 'time frame', 'delivery'], response: "Depends on scope. A basic private AI deployment takes 4-6 weeks. Custom software projects vary — we'll scope it properly before committing to timelines." },
+  
+  // Why Mentaris
+  { keywords: ['why mentaris', 'why you', 'different', 'competitor', 'vs'], response: "We're not just consultants who demo and disappear. We implement systems that actually work in production. We come from industry (fire safety) so we understand compliance pain firsthand." },
+];
 
 function findResponse(input: string): string {
   const lower = input.toLowerCase().trim();
-  if (responses[lower]) return responses[lower];
-  for (const [key, value] of Object.entries(responses)) {
-    if (lower.includes(key)) return value;
+  
+  // Check each pattern
+  for (const pattern of responsePatterns) {
+    for (const keyword of pattern.keywords) {
+      if (lower.includes(keyword)) {
+        return pattern.response;
+      }
+    }
   }
-  return "That's a great question for a deeper conversation. Book a free 30-minute call at mentaris.io/contact and we'll discuss your specific needs.";
+  
+  // Smart fallback based on question type
+  if (lower.includes('?')) {
+    return "Good question — that's probably worth a proper conversation. Book a free 30-min call at mentaris.io/contact and we'll dig into the details.";
+  }
+  
+  return "I'm not sure I understood that. Try asking about our services, private AI, fire compliance, or pricing. Or type 'help' for suggestions.";
 }
 
 export default function TerminalChat() {
   const [messages, setMessages] = useState<Message[]>([
-    { type: 'system', text: "Mentaris AI Assistant v1.0" },
-    { type: 'system', text: "Type a question and press Enter..." },
+    { type: 'system', text: "Mentaris AI v1.0 — ask me anything" },
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
-  // Scroll within container only, not the whole page
   useEffect(() => {
     if (messagesContainerRef.current) {
       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
@@ -68,7 +110,7 @@ export default function TerminalChat() {
     setIsTyping(true);
     
     const response = findResponse(userMessage);
-    const delay = Math.min(800 + response.length * 15, 2500);
+    const delay = Math.min(600 + response.length * 10, 2000);
     
     setTimeout(() => {
       setMessages(prev => [...prev, { type: 'ai', text: response }]);
@@ -100,7 +142,6 @@ export default function TerminalChat() {
       onClick={() => inputRef.current?.focus()}
     >
       <div className="bg-[#0a0a0a] border border-zinc-800 rounded-lg overflow-hidden shadow-2xl shadow-black/50">
-        {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-3 bg-zinc-900/80 border-b border-zinc-800">
           <div className="flex gap-1.5">
             <div className="w-3 h-3 rounded-full bg-red-500/80" />
@@ -114,7 +155,6 @@ export default function TerminalChat() {
           </div>
         </div>
         
-        {/* Messages - scroll happens here only */}
         <div 
           ref={messagesContainerRef}
           className="p-4 font-mono text-sm h-80 overflow-y-auto"
@@ -150,7 +190,6 @@ export default function TerminalChat() {
           </div>
         </div>
         
-        {/* Input */}
         <form onSubmit={handleSubmit} className="border-t border-zinc-800">
           <div className="flex items-center px-4 py-3 gap-2">
             <span className="text-cyan-400 font-mono text-sm">→</span>
@@ -159,7 +198,7 @@ export default function TerminalChat() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about our services..."
+              placeholder="Ask me anything..."
               disabled={isTyping}
               className="flex-1 bg-transparent text-sm font-mono text-zinc-300 placeholder:text-zinc-600 focus:outline-none disabled:opacity-50"
             />
