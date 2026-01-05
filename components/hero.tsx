@@ -7,7 +7,7 @@ import TerminalChat from './terminal-chat';
 
 function OrbitalBackground() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
+    <div className="relative flex items-center justify-center">
       <motion.div
         className="absolute w-[500px] h-[500px] rounded-full border border-zinc-800/50"
         animate={{ rotate: 360 }}
@@ -109,7 +109,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="hidden lg:block relative"
           >
-            <OrbitalBackground />
+            <div className="absolute -top-32 -right-32">
+              <OrbitalBackground />
+            </div>
             <div className="relative z-10">
               <TerminalChat />
             </div>
