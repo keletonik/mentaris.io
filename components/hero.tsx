@@ -3,12 +3,11 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import TerminalAnimation from './terminal-animation';
+import TerminalChat from './terminal-chat';
 
 function OrbitalBackground() {
   return (
     <div className="absolute inset-0 flex items-center justify-center">
-      {/* Outer ring */}
       <motion.div
         className="absolute w-[500px] h-[500px] rounded-full border border-zinc-800/50"
         animate={{ rotate: 360 }}
@@ -17,7 +16,6 @@ function OrbitalBackground() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-cyan-400" />
       </motion.div>
       
-      {/* Middle ring */}
       <motion.div
         className="absolute w-[350px] h-[350px] rounded-full border border-zinc-800/30"
         animate={{ rotate: -360 }}
@@ -27,7 +25,6 @@ function OrbitalBackground() {
         <div className="absolute bottom-0 left-1/4 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-400/60" />
       </motion.div>
       
-      {/* Inner ring */}
       <motion.div
         className="absolute w-[200px] h-[200px] rounded-full border border-zinc-800/20"
         animate={{ rotate: 360 }}
@@ -36,7 +33,6 @@ function OrbitalBackground() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-green-400" />
       </motion.div>
       
-      {/* Center dot */}
       <div className="absolute w-1 h-1 rounded-full bg-cyan-400/40" />
     </div>
   );
@@ -45,7 +41,6 @@ function OrbitalBackground() {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-[#111113]">
         <div 
           className="absolute inset-0 opacity-40"
@@ -59,7 +54,6 @@ export default function Hero() {
 
       <div className="container-narrow relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Content */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -109,19 +103,15 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Terminal with orbital behind */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="hidden lg:block relative"
           >
-            {/* Orbital background */}
             <OrbitalBackground />
-            
-            {/* Terminal on top */}
             <div className="relative z-10">
-              <TerminalAnimation />
+              <TerminalChat />
             </div>
           </motion.div>
         </div>
