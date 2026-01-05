@@ -346,7 +346,7 @@ export default function FyreOneAIPage() {
                   <span className="font-medium">You're on the list! We'll be in touch soon.</span>
                 </div>
               )}
-              <p className="text-xs text-zinc-600 mt-4">Mobile beta launching Q1 2025. Desktop application to follow.</p>
+              <p className="text-xs text-zinc-600 mt-4">Mobile beta launching Q1 2026. Desktop application to follow.</p>
             </div>
           </motion.div>
         </div>

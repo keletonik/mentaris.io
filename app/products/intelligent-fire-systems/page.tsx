@@ -367,7 +367,7 @@ export default function IntelligentFireSystemsPage() {
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-semibold px-8 py-4 rounded-lg transition-all">
               Register Interest <ArrowRight className="w-5 h-5" />
             </Link>
-            <p className="text-sm text-zinc-600 mt-4">Currently in development. Expected pilot Q2 2025.</p>
+            <p className="text-sm text-zinc-600 mt-4">Currently in development. Expected pilot Q2 2026.</p>
           </motion.div>
         </div>
       </section>

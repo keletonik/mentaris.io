@@ -8,7 +8,7 @@ export default function AIImplementationSuccess() {
       title="Why Most AI Projects Fail (And How to Avoid It)"
       excerpt="The gap between AI demo and AI value is where most projects die. A practical guide to crossing that gap."
       author="Casper Tavitian"
-      date="January 2025"
+      date="January 2026"
       readTime="10 min read"
       category="Implementation"
     >
