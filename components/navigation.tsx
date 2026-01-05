@@ -11,6 +11,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   const handleScroll = useCallback(() => {
@@ -27,6 +28,7 @@ export default function Navigation() {
       if (e.key === 'Escape') {
         setIsMobileMenuOpen(false);
         setIsServicesOpen(false);
+        setIsProductsOpen(false);
       }
     };
     window.addEventListener('keydown', handleEscape);
@@ -45,13 +47,16 @@ export default function Navigation() {
   }, [isMobileMenuOpen]);
 
   const services = [
+    { name: 'Private AI', href: '/services/private-ai', description: 'AI on your infrastructure' },
     { name: 'AI Tools', href: '/services/ai-tools', description: 'Custom AI applications' },
     { name: 'Custom Software', href: '/services/custom-software', description: 'Bespoke development' },
-    { name: 'Machine Learning', href: '/services/machine-learning', description: 'ML model development' },
-    { name: 'Data Analytics', href: '/services/data-analytics', description: 'Insights from data' },
     { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security solutions' },
-    { name: 'Malware Analysis', href: '/services/malware-analysis', description: 'Threat intelligence' },
     { name: 'AI Consulting', href: '/services/ai-consulting', description: 'Strategy advisory' },
+  ];
+
+  const products = [
+    { name: 'FyreOne AI', href: '/products/fyreone-ai', description: 'Fire safety compliance platform' },
+    { name: 'Intelligent Fire Systems', href: '/products/intelligent-fire-systems', description: 'AI-powered monitoring' },
   ];
 
   const navLinks = [
@@ -89,7 +94,7 @@ export default function Navigation() {
               />
             </Link>
 
-            <div className="hidden lg:flex items-center gap-12">
+            <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -100,6 +105,7 @@ export default function Navigation() {
                 </Link>
               ))}
 
+              {/* Services Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => setIsServicesOpen(true)}
@@ -143,6 +149,50 @@ export default function Navigation() {
                           >
                             <span className="block text-sm text-zinc-300 group-hover:text-cyan-400 transition-colors">{service.name}</span>
                             <span className="block text-xs text-zinc-600 mt-0.5">{service.description}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Products Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
+              >
+                <button 
+                  className="nav-link px-2 py-2 flex items-center gap-1"
+                  aria-expanded={isProductsOpen}
+                  aria-haspopup="true"
+                  onClick={() => setIsProductsOpen(!isProductsOpen)}
+                >
+                  Products
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                <AnimatePresence>
+                  {isProductsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: shouldReduceMotion ? 0 : timing.fast }}
+                      className="absolute top-full left-0 mt-2 w-72 bg-zinc-900 border border-zinc-800 shadow-xl shadow-black/20"
+                      role="menu"
+                    >
+                      <div className="py-2">
+                        {products.map((product) => (
+                          <Link
+                            key={product.name}
+                            href={product.href}
+                            className="block px-4 py-2.5 hover:bg-zinc-800/50 transition-colors group"
+                            role="menuitem"
+                          >
+                            <span className="block text-sm text-zinc-300 group-hover:text-cyan-400 transition-colors">{product.name}</span>
+                            <span className="block text-xs text-zinc-600 mt-0.5">{product.description}</span>
                           </Link>
                         ))}
                       </div>
@@ -232,6 +282,22 @@ export default function Navigation() {
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {service.name}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-zinc-800">
+                  <p className="px-4 text-xs font-mono text-zinc-500 uppercase tracking-wider mb-3">Products</p>
+                  <nav className="space-y-1">
+                    {products.map((product) => (
+                      <Link
+                        key={product.name}
+                        href={product.href}
+                        className="block px-4 py-2.5 text-zinc-400 hover:text-cyan-400 hover:bg-zinc-800/50 rounded transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {product.name}
                       </Link>
                     ))}
                   </nav>
